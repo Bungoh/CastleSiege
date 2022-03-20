@@ -5,6 +5,7 @@ import cloud.commandframework.bukkit.BukkitCommandManager;
 import cloud.commandframework.execution.CommandExecutionCoordinator;
 import cloud.commandframework.paper.PaperCommandManager;
 import com.dominion.castlesiege.commands.Commands;
+import com.dominion.castlesiege.text.Messages;
 import com.dominion.castlesiege.text.TextColors;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -18,8 +19,12 @@ public final class CastleSiege extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        // Detect and Setup Hex Support
+        TextColors.setup(this);
         // Setup Main Config File
         setupConfig();
+        // Setup Messages
+        Messages.setup();
         // Setup Commands
         setupCommands();
     }
