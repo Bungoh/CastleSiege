@@ -1,0 +1,6 @@
+name: CastleSiege
+version: '${project.version}'
+main: com.dominion.castlesiege.CastleSiege
+api-version: 1.18
+authors: [ Bungoh, Julius_the_Great ]
+description: Castle Siege Minigame Plugin
